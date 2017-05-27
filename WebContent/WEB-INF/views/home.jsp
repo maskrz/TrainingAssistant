@@ -1,6 +1,7 @@
 
-        <div class="body">
+        <div class="body" ng-app="home" ng-controller="HomeCtrl">
             <h1>Home page !</h1>
+            <p ng-click="loadRecords()">{{test}}</p>
  
             <p>The time on the server is ${serverTime}.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore

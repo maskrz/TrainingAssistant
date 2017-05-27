@@ -3,48 +3,35 @@
        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
-  
-    <definition name="defaultTemplate" template="/WEB-INF/template/default/template.jsp">
-        <put-attribute name="header" value="/WEB-INF/template/default/header.jsp" />
-        <put-attribute name="menu" value="/WEB-INF/template/default/menu.jsp" />
-        <put-attribute name="footer" value="/WEB-INF/template/default/footer.jsp" />
-    </definition>
-    
-      
-    <definition name="index" extends="defaultTemplate">
-        <put-attribute name="body" value="/WEB-INF/index.jsp" />  
-    </definition>  
-      
-    <definition name="about" extends="defaultTemplate">
-        <put-attribute name="body" value="/WEB-INF/views/about.jsp" />  
-    </definition>  
-      
-    <definition name="home" extends="defaultTemplate">
-        <put-attribute name="body" value="/WEB-INF/views/home.jsp" />  
-    </definition>  
-    
-    <!-- Base Definition -->
-   <definition name="defaultTemplate"
-       template="/WEB-INF/template/default/template.jsp">  
-        <put-attribute name="header" value="/WEB-INF/template/default/header.jsp" />
-        <put-attribute name="menu" value="/WEB-INF/template/default/menu.jsp" />
-        <put-attribute name="footer" value="/WEB-INF/template/default/footer.jsp" />
-       <put-attribute name="body" value="" />  
-   </definition>  
-  
-   <!-- Home Page -->
-   <definition name="index" extends="defaultTemplate">  
-        <put-attribute name="body" value="/WEB-INF/index.jsp" />  
-   </definition>  
- 
-   <!-- Product Page -->
-   <definition name="about" extends="defaultTemplate">  
-        <put-attribute name="body" value="/WEB-INF/views/about.jsp" />  
-   </definition>  
-       
-   <!-- Contact-us Page -->
-   <definition name="home" extends="defaultTemplate">   
-        <put-attribute name="body" value="/WEB-INF/views/home.jsp" />  
-   </definition>  
-  
+
+	<definition name="defaultTemplate" template="/WEB-INF/template/default/template.jsp">
+		<put-attribute name="header"
+			value="/WEB-INF/template/default/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/template/default/menu.jsp" />
+		<put-attribute name="footer"
+			value="/WEB-INF/template/default/footer.jsp" />
+		<put-list-attribute name="javascripts">
+			<add-attribute
+				value="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js" />
+			<add-attribute
+				value="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular-resource.min.js" />
+			<add-attribute
+				value="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-resource.min.js" />
+			<add-attribute value="/resources/js/resourceProvider.js" />
+		</put-list-attribute>
+	</definition>
+
+	<definition name="about" extends="defaultTemplate">
+		<put-attribute name="body" value="/WEB-INF/views/about.jsp" />
+	</definition>
+
+	<definition name="home" extends="defaultTemplate">
+		<put-attribute name="body" value="/WEB-INF/views/home.jsp" />
+		<put-list-attribute name="javascripts" inherit="true">
+			<add-attribute value="https://www.gstatic.com/charts/loader.js" />
+			<add-attribute value="/resources/js/home/homeController.js" />
+			<add-attribute value="/resources/js/home/homeService.js" />
+		</put-list-attribute>
+	</definition>
+
 </tiles-definitions>

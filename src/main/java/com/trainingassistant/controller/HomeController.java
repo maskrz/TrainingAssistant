@@ -9,7 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.trainingassistant.service.configuration.ConfigurationService;
 import com.trainingassistant.service.configuration.PropertyName;
@@ -21,13 +21,13 @@ public class HomeController {
 	ConfigurationService configurationService;
 
 	@RequestMapping("/welcome")
-	public ModelAndView helloWorld() {
+	public @ResponseBody Wrapper helloWorld() {
 
 		String message = getConfigurationService().getProperty(PropertyName.WELCOME_TEXT);
-		return new ModelAndView("welcome", "message", message);
+		return new Wrapper(message);
 	}
 
-	@RequestMapping(value = {"/home"}, method = RequestMethod.GET)
+	@RequestMapping(value = {"/home", "/"}, method = RequestMethod.GET)
     public String home(Locale locale, Model model) {
          
         Date date = new Date();

@@ -24,13 +24,13 @@
 
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
-	<bean class="java.net.URI" id="dbUrl">
-		<constructor-arg value="${DATABASE_URL}" />
-	</bean>
 <!-- 	<bean class="java.net.URI" id="dbUrl"> -->
-<!-- 		<constructor-arg -->
-<!-- 			value="postgres://postgres:postgres@localhost:5432/trainingassistant" /> -->
+<!-- 		<constructor-arg value="${DATABASE_URL}" /> -->
 <!-- 	</bean> -->
+	<bean class="java.net.URI" id="dbUrl">
+		<constructor-arg
+			value="postgres://postgres:postgres@localhost:5432/trainingassistant" />
+	</bean>
 	
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="${jdbc.driverClassName}" />

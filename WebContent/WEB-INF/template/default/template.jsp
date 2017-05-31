@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
-<title>Default tiles template</title>
+<title>Training assistant</title>
 <tiles:importAttribute name="javascripts" />
 <c:forEach var="js" items="${javascripts}">
 	<c:url var="jsSrc" value="${js}" />

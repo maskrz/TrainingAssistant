@@ -1,3 +1,22 @@
+.main-content {
+	margin-left: 20px;
+	margin-right: 20px;
+	display: flex;
+}
+
+.page-content {
+	background-color: #cfd1c8;
+	color: #061023;
+}
+
+a {
+	color: #061023;
+}
+
+a:hover {
+	color: #360568;
+}
+
 body {
-	margin: 0;
+	height: 100%;
 }

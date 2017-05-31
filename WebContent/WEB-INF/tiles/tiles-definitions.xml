@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE tiles-definitions PUBLIC
        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
@@ -8,9 +8,11 @@
 		<put-attribute name="header"
 			value="/WEB-INF/template/default/header.jsp" />
 		<put-attribute name="menu" value="/WEB-INF/template/default/menu.jsp" />
-		<put-attribute name="footer"
-			value="/WEB-INF/template/default/footer.jsp" />
 		<put-list-attribute name="javascripts">
+			<add-attribute
+				value="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js" />
+			<add-attribute
+				value="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" />
 			<add-attribute
 				value="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js" />
 			<add-attribute
@@ -18,19 +20,77 @@
 			<add-attribute
 				value="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-resource.min.js" />
 			<add-attribute value="/resources/js/resourceProvider.js" />
+			<add-attribute
+				value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" />
+		</put-list-attribute>
+		<put-list-attribute name="stylesheets">
+			<add-attribute
+				value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+			<add-attribute
+				value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" />
+			<add-attribute value="/resources/css/template/main.css" />
+			<add-attribute value="/resources/css/template/header.css" />
+			<add-attribute value="/resources/css/template/menu.css" />
+			<add-attribute value="/resources/css/template/content.css" />
 		</put-list-attribute>
 	</definition>
 
-	<definition name="about" extends="defaultTemplate">
-		<put-attribute name="body" value="/WEB-INF/views/about.jsp" />
-	</definition>
-
 	<definition name="home" extends="defaultTemplate">
-		<put-attribute name="body" value="/WEB-INF/views/home.jsp" />
+		<put-attribute name="content" value="/WEB-INF/views/home.jsp" />
 		<put-list-attribute name="javascripts" inherit="true">
 			<add-attribute value="https://www.gstatic.com/charts/loader.js" />
 			<add-attribute value="/resources/js/home/homeController.js" />
 			<add-attribute value="/resources/js/home/homeService.js" />
+		</put-list-attribute>
+		<put-list-attribute name="stylesheets" inherit="true">
+			<add-attribute value="/resources/css/home.css" />
+		</put-list-attribute>
+	</definition>
+
+	<definition name="contact" extends="defaultTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/contact.jsp" />
+		<put-list-attribute name="stylesheets" inherit="true">
+			<add-attribute value="/resources/css/contact.css" />
+		</put-list-attribute>
+	</definition>
+
+	<definition name="tools" extends="defaultTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tools/tools.jsp" />
+		<put-list-attribute name="stylesheets" inherit="true">
+			<add-attribute value="/resources/css/tools/tools.css" />
+		</put-list-attribute>
+	</definition>
+
+	<definition name="wsr" extends="tools">
+		<put-attribute name="tool" value="/WEB-INF/views/tools/wsr.jsp"
+			cascade="true" />
+		<put-attribute name="toolTitle"
+			value="Wskaźnik Skuteczności Restytucji" cascade="true" />
+		<put-list-attribute name="javascripts" inherit="true">
+			<add-attribute value="/resources/js/tools/wsrController.js" />
+		</put-list-attribute>
+		<put-list-attribute name="stylesheets" inherit="true">
+			<add-attribute value="/resources/css/tools/wsr.css" />
+		</put-list-attribute>
+	</definition>
+
+	<definition name="pace" extends="tools">
+		<put-attribute name="tool" value="/WEB-INF/views/tools/pace.jsp"
+			cascade="true" />
+		<put-attribute name="toolTitle" value="Przelicznik Tempa"
+			cascade="true" />
+		<put-list-attribute name="stylesheets" inherit="true">
+			<add-attribute value="/resources/css/tools/pace.css" />
+		</put-list-attribute>
+	</definition>
+
+	<definition name="are" extends="tools">
+		<put-attribute name="tool" value="/WEB-INF/views/tools/are.jsp"
+			cascade="true" />
+		<put-attribute name="toolTitle" value="Kalkulator wielobojowy"
+			cascade="true" />
+		<put-list-attribute name="stylesheets" inherit="true">
+			<add-attribute value="/resources/css/tools/are.css" />
 		</put-list-attribute>
 	</definition>
 

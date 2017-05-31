@@ -14,6 +14,8 @@
 	<mvc:annotation-driven />
 	<mvc:default-servlet-handler />
 	<mvc:resources mapping="/resources/**" location="/resources/" />
+	<mvc:resources mapping="/css/**" location="/resources/css/" />
+    <mvc:resources mapping="/img/**" location="/resources/images/" />
 
  	<bean class="org.springframework.web.servlet.view.UrlBasedViewResolver">
     	<property name="order" value="1" />
@@ -32,4 +34,5 @@
             </list>
         </property>
     </bean>
+
 </beans>

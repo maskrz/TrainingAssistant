@@ -40,9 +40,9 @@ public class HomeController {
         return "home";
     }
 	
-	@RequestMapping(value = "/about", method = RequestMethod.GET)
+	@RequestMapping(value = "/contact", method = RequestMethod.GET)
     public String about(Model model) {
-        return "about";
+        return "contact";
     }
 
 	public ConfigurationService getConfigurationService() {

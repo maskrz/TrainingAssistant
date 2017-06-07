@@ -1,51 +1,51 @@
 <div ng-app="wsr" ng-controller="WsrCtrl">
-	<div class="row wsr-row">
-		<div class="col-md-2 wsr-label">
+	<div class="row tool-row">
+		<div class="col-md-2 tool-label">
 			<label>T1: </label>
 		</div>
-		<div class="col-md-3 wsr-input">
+		<div class="col-md-3 tool-input">
 			<input type="number" class="form-control" ng-model="t1" min="30"
 				max="200" ng-change="calculate()">
 		</div>
-		<div class="col-md-7 wsr-note">
+		<div class="col-md-7 tool-note">
 			<label>(Tętno przed treningiem)</label>
 		</div>
 	</div>
 
-	<div class="row wsr-row">
-		<div class="col-md-2 wsr-label">
+	<div class="row tool-row">
+		<div class="col-md-2 tool-label">
 			<label>T2: </label>
 		</div>
-		<div class="col-md-3 wsr-input">
+		<div class="col-md-3 tool-input">
 			<input type="number" class="form-control" ng-model="t2" min="60"
 				max="250" ng-change="calculate()">
 		</div>
-		<div class="col-md-7 wsr-note">
+		<div class="col-md-7 tool-note">
 			<label>(Tętno po ostatnim głównym ćwiczeniu)</label>
 		</div>
 	</div>
 
-	<div class="row wsr-row">
-		<div class="col-md-2 wsr-label">
+	<div class="row tool-row">
+		<div class="col-md-2 tool-label">
 			<label>T3: </label>
 		</div>
-		<div class="col-md-3 wsr-input">
+		<div class="col-md-3 tool-input">
 			<input type="number" class="form-control" ng-model="t3" min="30"
 				max="200" ng-change="calculate()">
 		</div>
-		<div class="col-md-7 wsr-note">
+		<div class="col-md-7 tool-note">
 			<label>(Tętno po 4 minutach restytucji po głównym ćwiczeniu)</label>
 		</div>
 	</div>
 
-	<div class="row wsr-row">
-		<div class="col-md-2 wsr-label">
+	<div class="row tool-row">
+		<div class="col-md-2 tool-label">
 			<label>WSR: </label>
 		</div>
-		<div class="col-md-3 wsr-input">
+		<div class="col-md-3 tool-input">
 			<input type="number" class="form-control" readonly ng-model="wsr">
 		</div>
-		<div class="col-md-7 wsr-note">
+		<div class="col-md-7 tool-note">
 			<label>(( T2 - T3 / T2 - T1) x 100%)</label>
 		</div>
 	</div>

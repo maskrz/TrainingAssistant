@@ -1,0 +1,9 @@
+.pace-results-right .tool-row,
+.pace-results-left .tool-row {
+	height: 30px;
+}
+
+.pace-results-right,
+.pace-results-left {
+	padding-top: 15px;
+}

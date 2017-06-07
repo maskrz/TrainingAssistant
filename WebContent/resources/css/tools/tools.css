@@ -6,3 +6,46 @@
 .toolContent {
 	padding-top: 20px;
 }
+
+.tool-row {
+	display: flex;
+	align-items: center;
+	margin-bottom: 5px;
+}
+
+.tool-label {
+	text-align: right;
+	padding-right: 0px;
+}
+
+.tool-label label {
+	margin-bottom: 0px;
+}
+
+.tool-input .form-control {
+	width: auto;
+}
+
+.tool-input .ng-invalid {
+	border-color: #ff0000;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px
+		rgba(102, 175, 233, .6);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px
+		rgba(102, 175, 233, .6);
+}
+
+.tool-section-title {
+	margin-top: 30px;
+	font-size: 30px;
+	border-bottom: 1px solid #360568;
+}
+
+.tool-note {
+	text-align: left;
+	padding-right: 0px;
+}
+
+.tool-note label {
+	margin-bottom: 0px;
+}

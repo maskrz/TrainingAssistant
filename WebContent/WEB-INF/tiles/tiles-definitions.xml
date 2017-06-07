@@ -79,6 +79,9 @@
 			cascade="true" />
 		<put-attribute name="toolTitle" value="Przelicznik Tempa"
 			cascade="true" />
+		<put-list-attribute name="javascripts" inherit="true">
+			<add-attribute value="/resources/js/tools/paceController.js" />
+		</put-list-attribute>
 		<put-list-attribute name="stylesheets" inherit="true">
 			<add-attribute value="/resources/css/tools/pace.css" />
 		</put-list-attribute>

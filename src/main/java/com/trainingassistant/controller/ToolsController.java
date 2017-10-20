@@ -24,4 +24,9 @@ public class ToolsController {
     public String pace(Model model) {
         return "pace";
     }
+	
+	@RequestMapping(value = "/journal", method = RequestMethod.GET)
+    public String journal(Model model) {
+        return "journal";
+    }
 }

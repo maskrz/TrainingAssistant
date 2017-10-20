@@ -4,6 +4,7 @@
 <spring:url value="/tools/wsr" var="wsrUrl" htmlEscape="true" />
 <spring:url value="/tools/pace" var="paceUrl" htmlEscape="true" />
 <spring:url value="/tools/are" var="areUrl" htmlEscape="true" />
+<spring:url value="/tools/journal" var="journalUrl" htmlEscape="true" />
 <div class="menu">
 	<div class="menu-element-top">
 		<span class="glyphicon glyphicon-home"></span> <a href="${homeUrl}">Strona
@@ -24,6 +25,10 @@
 		<div class="menu-element-nested">
 			<span class="glyphicon glyphicon-dashboard"></span> <a
 				href="${areUrl}">Kalkulator wielobojowy</a>
+		</div>
+		<div class="menu-element-nested">
+			<span class="glyphicon glyphicon-book"></span> <a
+				href="${journalUrl}">Dzienniczek</a>
 		</div>
 	</div>
 	<div class="menu-element-top">

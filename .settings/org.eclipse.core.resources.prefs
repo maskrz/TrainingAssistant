@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
 encoding//WebContent/WEB-INF/template/default/menu.jsp=UTF-8
 encoding//WebContent/WEB-INF/tiles/tiles-definitions.xml=UTF-8
+encoding//WebContent/WEB-INF/views/tools/pace.jsp=UTF-8
 encoding//WebContent/WEB-INF/views/tools/wsr.jsp=UTF-8

@@ -17,7 +17,7 @@
 	<div class="row tool-row" ng-repeat="athlete in athletes">
 		<div class="col-md-2 tool-label"
 			ng-style="{'background-color': athlete.color}">
-			<label>{{athlete.name}}</label>
+			<label>{{restoreSpaces(athlete.name)}}</label>
 		</div>
 		<div class="col-md-10">
 			<div class="row">
@@ -27,9 +27,11 @@
 		</div>
 	</div>
 
-	<div class="row tool-row" ng-repeat="athlete in athletes">
-		<span ng-attr-id="{{ 'runner-' + athlete.name }}"
-			ng-style="{'background-color': athlete.color}"></span>
+	<div class="row tool-row stopwatch-row" ng-repeat="athlete in athletes">
+		<div class="stopwatch-frame"
+			ng-style="{'background-color': athlete.color}">
+			<span class="stopwatch-value" ng-attr-id="{{ 'runner-' + athlete.name }}"></span>
+		</div>
 		<button type="button" class="btn btn-primary"
 			ng-click="startStopwatch(athlete)">Start</button>
 		<button type="button" class="btn btn-warning"
@@ -37,7 +39,7 @@
 		<button type="button" class="btn btn-danger"
 			ng-click="resetStopwatch(athlete)">Reset</button>
 		<button type="button" class="btn btn-success"
-			ng-click="addTime(athlete)">Dodaj to czasow</button>
+			ng-click="addTime(athlete)">Dodaj do czasow</button>
 	</div>
 
 

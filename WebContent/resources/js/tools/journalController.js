@@ -18,16 +18,13 @@ angular.module('journal', [ 'journalService' ]).controller('JournalCtrl',
 			}
 
 			$scope.$watch('athletes.length', function() {
-				console.log("about to initialize");
 				setTimeout(function() {
 					initializeStopwatches($scope.athletes);
 				}, 500);
 			});
 
 			$scope.addAthlete = function(athleteName) {
-				addAthlete($scope, athleteName)
-				console.log($scope.athletes[0].times);
-
+				addAthlete($scope, escapeSpaces(athleteName))
 			}
 
 			$scope.startStopwatch = function(athlete) {
@@ -42,11 +39,14 @@ angular.module('journal', [ 'journalService' ]).controller('JournalCtrl',
 				athlete.stopwatch.runner('reset');
 			}
 
+			$scope.restoreSpaces = function(athleteName) {
+				return restoreSpaces(athleteName);
+			}
+
 			$scope.addTime = function(athlete) {
 				console.log(athlete.stopwatch.runner('info'));
 				var time = athlete.stopwatch.runner('info').formattedTime;
 				athlete.times.push(time);
-////				athlete.stopwatch.runner('start');
 			}
 		} ]);
 
@@ -81,4 +81,12 @@ function initializeStopwatches(athletes) {
 			athlete.stopwatch = $('#runner-' + athlete.name);
 		}		
 	}
+}
+
+function escapeSpaces(str) {
+	return str.replace(" ", "-");
+}
+
+function restoreSpaces(str) {
+	return str.replace("-", " ");
 }
